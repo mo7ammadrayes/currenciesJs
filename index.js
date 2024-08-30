@@ -10,7 +10,7 @@ const switchBtn = document.getElementById('switch');
 const convertBtn = document.getElementById('convert');
 const convertAmount = document.getElementById('convertAmount');
 const favBtn = document.getElementById('favBtn'); // `Make` sure this element exists in your HTML
-const apiKey = window.API_KEY;
+const apiKey = "";// enter you API key here
 
 async function fetchCurrencies() {
     const apiUrl = `https://v6.exchangerate-api.com/v6/${apiKey}/latest/USD`;
