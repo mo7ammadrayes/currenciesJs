@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter Rayes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Currency Converter Rayes</h1>
+            <p id="lastUpdated"></p> 
+            <p id="nextUpdated"></p>
+            <p id="time"></p>
+        </div>
+    </header>
+
+    <main>
+        <div id="choicesDiv">
+            <form>
+                <label for="from">Choose from:</label>
+                <select id="from" name="from">
+                    <option value="other">Other</option>
+                </select>
+
+                <label for="to">Choose to:</label>
+                <select id="into" name="to">
+                    <option value="other">Other</option>
+                </select>
+                <br>
+
+                <input type="text" id="convertAmount" placeholder="Enter the amount" required>
+                <br>
+            </form>
+        </div>
+<div id="buttons">
+    <button id="switch" type="button">switch</button>
+    <button id="convert" type="button">Convert</button>
+
+</div>
+        <div id="resultsDiv"></div>
+
+        <button id="favBtn" class="favBtn" aria-label="Add to Favorites">Add to Favorites</button> <!-- Positioned below the results -->
+
+        <div id="favoritesList">
+            <h2>Your Favorites:</h2>
+            <ul id="favorites"></ul>
+        </div>
+    </main>
+
+    <footer>
+        <p>All the data was collected from ExchangeRate-API</p>
+    </footer>
+    <script>
+        window.API_KEY = "{{ API_KEY }}"; // Netlify will replace {{ API_KEY }} with the actual value
+    </script>
+    <script src="index.js"></script>
+</body>
+</html>
